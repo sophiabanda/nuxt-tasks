@@ -30,3 +30,8 @@ If a file with has method name in it, it will respond to requests for that
 specific method. 
 
 Globally available is defineEventHandler
+
+Built in composable called useFetch for requesting api data
+
+Built in sendError and createError allow you to send codes
+and messaged to the frontend.
