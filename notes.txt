@@ -1,0 +1,32 @@
+By default, app.vue is the only entry point for our Nuxt app.
+
+If you add a layouts folder, this will automatically be picked up by Nuxt. 
+You can create a default layout file that will be used to render out pages;
+This sounds like most closely like ejs templating to me so far. In a layout 
+file, the content of the page will be displayed in the <slot /> component.
+Layouts are content that is shared across all pages.
+
+<slot /> is the marker that states where a page should be rendered.
+
+Adding <NuxtLayout /> to the app component tells Nuxt to look
+for our default layout.
+
+NuxtPage will find any pages we've created. Pages are Vue components.
+
+When creating a component folder:
+    Every nested folder name will be prepended to any file inside of that folder. For 
+    example: component/app/index.vue: app-index.vue
+
+Routes:
+<NuxtLink/>
+ In order to link to pages you can use Vue's internal "to" (to="/create").
+ You can also use object syntax and bind this to say this should go to the 
+ route with the name 'create' (:to="{ name: 'create' }")
+
+API:
+Server file built on Nitro, which also utilizes h3
+Add an api folder to the server folder. Create, for example, tasks.get.ts.
+If a file with has method name in it, it will respond to requests for that 
+specific method. 
+
+Globally available is defineEventHandler
